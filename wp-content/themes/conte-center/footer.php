@@ -1,4 +1,5 @@
-		</section>
+
+			</section>
 <!--/#content -->
 
 
@@ -10,10 +11,11 @@
 
 
 
-		<aside id="sidebar">
+			<aside id="sidebar">
 
-		</aside>
+			</aside>
 <!--/#sidebar -->
+		</div><!--/.container -->
 
 
 

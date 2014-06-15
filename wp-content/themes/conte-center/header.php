@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IE 7]> <html class="ie ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8]> <html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
@@ -60,4 +59,20 @@
 	</head>
 
 
-	<body class="" ng-app="pkApp">
+	<body <?php body_class(); ?> ng-app="conteApp">
+		<header id="header">
+
+		</header>
+<!--/body > #header -->
+
+
+
+
+
+
+
+
+
+
+		<div class="container">
+			<section id="content">
