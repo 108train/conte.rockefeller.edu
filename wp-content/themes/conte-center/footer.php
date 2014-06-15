@@ -1,28 +1,63 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains footer content and the closing of the #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-?>
+		</section>
+<!--/#content -->
 
-		</div><!-- #main -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
 
-			<?php get_sidebar( 'footer' ); ?>
 
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
 
-	<?php wp_footer(); ?>
-</body>
+
+
+
+
+
+		<aside id="sidebar">
+
+		</aside>
+<!--/#sidebar -->
+
+
+
+
+
+
+
+
+
+
+		<footer id="footer">
+
+		</footer>
+<!--/body > #footer -->
+
+
+
+
+
+
+
+
+
+
+		<script src="/wp-content/themes/conte-center/js/angular-1.2.17.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/angular-route-1.2.17.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/angular-animate-1.2.17.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/jquery-1.11.0.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/jquery-ui-1.10.4.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/bootstrap-3.1.1.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/jquery.flexslider-2.2.0.min.js"></script>
+		<script src="/wp-content/themes/conte-center/js/app.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#testimonials').flexslider({
+					animation: "slide",
+					animationLoop: true,
+					directionNav: false,
+					keyboard: false,
+					itemMargin: 0,
+					slideshowSpeed: 15000,
+					touch: false
+				});
+			});
+		</script>
+	</body>
 </html>
