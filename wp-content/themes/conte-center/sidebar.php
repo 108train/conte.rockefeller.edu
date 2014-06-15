@@ -1,22 +1,29 @@
 <?php
 /**
- * The sidebar containing the secondary widget area
- *
- * Displays on posts and pages.
- *
- * If no active widgets are in this sidebar, hide it completely.
+ * The Sidebar containing the main widget area
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
  */
+?>
+<div id="secondary">
+	<?php
+		$description = get_bloginfo( 'description', 'display' );
+		if ( ! empty ( $description ) ) :
+	?>
+	<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
+	<?php endif; ?>
 
-if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<div id="tertiary" class="sidebar-container" role="complementary">
-		<div class="sidebar-inner">
-			<div class="widget-area">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-			</div><!-- .widget-area -->
-		</div><!-- .sidebar-inner -->
-	</div><!-- #tertiary -->
-<?php endif; ?>
+	<?php if ( has_nav_menu( 'secondary' ) ) : ?>
+	<nav role="navigation" class="navigation site-navigation secondary-navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+	</nav>
+	<?php endif; ?>
+
+	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</div><!-- #primary-sidebar -->
+	<?php endif; ?>
+</div><!-- #secondary -->
